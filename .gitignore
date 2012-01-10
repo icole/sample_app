@@ -2,3 +2,7 @@
 db/*.sqlite3
 log/*.log
 tmp/**/*
+# intellij project files
+.idea/*
+.idea
+sample_app.iml
