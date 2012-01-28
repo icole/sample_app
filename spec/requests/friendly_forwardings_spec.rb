@@ -8,5 +8,6 @@ describe "FriendlyForwardings" do
     fill_in :email,     :with => user.email
     fill_in :password,  :with => user.password
     click_button
-    respone.should render_template('user/edit')
+    response.should render_template('users/edit')
+  end
 end
