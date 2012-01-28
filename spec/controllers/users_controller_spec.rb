@@ -318,7 +318,7 @@ describe UsersController do
       
       it "should redirect to the users page" do
         delete :destroy, :id => @user
-        resopnse.should redirect_to(users_path)
+        response.should redirect_to(users_path)
       end
     end
   end

@@ -144,7 +144,7 @@ describe User do
     end
     
     it "should not be an admin by default" do
-      @User.should_not be_admin
+      @user.should_not be_admin
     end
     
     it "should be convertible to be admin" do
