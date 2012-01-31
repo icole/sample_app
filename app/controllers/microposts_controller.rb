@@ -17,11 +17,15 @@ class MicropostsController < ApplicationController
     @micropost.destroy
     redirect_back_or root_path
   end
+  
+  def self.from_users_followed_by(user)
+    where(:user_id => user.following.push(user))
+  end
 
   private
 
-  def authorized_user
-    @micropost = Micropost.find(params[:id])
-    redirect_to root_path unless current_user?(@micropost.user)
-  end
+    def authorized_user
+      @micropost = Micropost.find(params[:id])
+      redirect_to root_path unless current_user?(@micropost.user)
+    end
 end
